@@ -31,6 +31,7 @@ Requirements
 5. Drag and drop this repo to your web server, and enjoy!
 
 _To access admin panel, access /admin on your web_
+
 _To upload image folders, please see content/README.md_
 
 # License
