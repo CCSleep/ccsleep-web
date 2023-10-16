@@ -24,11 +24,12 @@ Requirements
 - Any S3 instance (in production, my web use Cloudflare R2)
 - PHP web server (Apache only!)
 
-1. Supply aws.phar from https://docs.aws.amazon.com/aws-sdk-php/v3/download/aws.phar and put it in `common/` folder
+1. Supply aws.phar from [here](https://docs.aws.amazon.com/aws-sdk-php/v3/download/aws.phar) and put it in `common/` folder
 2. Edit `common/s3_credentials.php` to your own S3 credentials (the config is ready for Cloudflare R2)
-3. Edit `common/conn.php` to your database credentials
-4. Edit admin password on `page/admin_login.php` (default is `admin`, you should probably change it)
-5. Drag and drop this repo to your web server, and enjoy!
+3. Create a database and import `ccsleep.sql` 
+4. Edit `common/conn.php` to your database credentials
+5. Edit admin password on `page/admin_login.php` (default is `admin`, you should probably change it)
+6. Drag and drop this repo to your web server, and enjoy!
 
 _To access admin panel, access /admin on your web_
 
