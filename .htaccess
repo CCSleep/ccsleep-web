@@ -1,0 +1,49 @@
+RewriteEngine On
+
+# homepage
+RewriteRule ^home/?$ /?page=home [L]
+RewriteRule ^home/edit/?$ /?page=home_edit [L]
+
+# blog
+RewriteRule ^blog/?$ /?page=blog&action=index [L]
+RewriteRule ^blog/new/?$ /?page=blog&action=add [L]
+RewriteRule ^blog/edit/([^/]*)/?$ /?page=blog&action=edit&id=$1 [L]
+RewriteRule ^blog/([^/]*)/?$ /?page=blog&action=detail&id=$1 [L]
+
+# layer
+RewriteRule ^layer/?$ /?page=layer&action=index [L]
+RewriteRule ^layer/new/?$ /?page=layer&action=add [L]
+RewriteRule ^layer/edit/([^/]*)/?$ /?page=layer&action=edit&id=$1 [L]
+RewriteRule ^layer/edit/?$ /?page=layer&action=index&edit=1 [L]
+
+# event
+RewriteRule ^event/?$ /?page=event&action=index [L]
+RewriteRule ^event/new/?$ /?page=event&action=add [L]
+RewriteRule ^event/edit/([^/]*)/?$ /?page=event&action=edit&id=$1 [L]
+RewriteRule ^event/([^/]*)/?$ /?page=event&action=detail&id=$1 [L]
+
+#gallery
+RewriteRule ^gallery/?$ /?page=event&action=index&mode=past_event [L]
+RewriteRule ^gallery/new/?$ /?page=gallery&action=add [L]
+RewriteRule ^gallery/edit/([^/]*)/?$ /?page=gallery&action=edit&id=$1 [L]
+RewriteRule ^gallery/list/?$ /?page=gallery&action=list [L]
+
+#admin
+RewriteRule ^admin/?$ /?page=admin [L]
+RewriteRule ^admin/upload/?$ /?page=admin_upload [L]
+RewriteRule ^admin_logout/?$ /?page=admin_logout [L]
+
+#api
+RewriteRule ^api/admin/upload/?$ /page/api/admin_upload_api.php [L]
+
+#### GalleryPlus
+
+# homepage
+
+RewriteRule ^gp/home/?$ /index_gp.php?page=home [L]
+
+RewriteRule ^g/([^/]*)/?$ /index_gp.php?page=gallery&id=$1&pg=1 [L]
+RewriteRule ^g/([^/]*)/p/([^/]*)/?$ /index_gp.php?page=gallery&id=$1&pg=$2 [L]
+
+RewriteRule ^i/([^/]*)/?$ /index_gp.php?page=image_view&id=$1 [L]
+RewriteRule ^ie/([^/]*)/?$ /index_gp.php?page=image_edit&id=$1 [L]
